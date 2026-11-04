@@ -52,58 +52,15 @@ quatrea/
 
 ## Local Execution
 
-The site is fully static. Any HTTP server will work.
+The site is fully static.
 
-### Option 1 — Python (simplest, no install)
-
-```bash
-cd quatrea
-python3 -m http.server 8000
-```
-
-Then visit http://localhost:8000/
-
-### Option 2 — Node.js
-
-```bash
-cd quatrea
-npx serve -p 8000
-# or
-npx http-server -p 8000
-```
-
-### Option 3 — VS Code Live Server
-
-Right-click `index.html` → "Open with Live Server".
-
-### Option 4 — Direct file access
+### Option 1 — Direct file access
 
 You can also open `index.html` directly in a browser. However, some features (like the page transitions and external image loading) work best via an HTTP server.
 
 ## Deployment
 
-The site is 100% static — deploy the entire `quatrea/` folder to any static host:
-
-### Netlify
-```bash
-cd quatrea
-npx netlify deploy --dir=. --prod
-```
-Or drag-and-drop the `quatrea/` folder onto https://app.netlify.com/drop
-
-### Vercel
-```bash
-cd quatrea
-npx vercel --prod
-```
-
-### GitHub Pages
-1. Push the `quatrea/` folder contents to a GitHub repository
-2. Settings → Pages → Source: main branch → / (root)
-3. Site will be live at `https://<username>.github.io/<repo>/`
-
-### Cloudflare Pages / AWS S3 / Any static host
-Upload all files preserving the folder structure.
+The site is 100% static — deploy the entire `quatrea/` folder to any static host
 
 ## Features
 
@@ -127,16 +84,6 @@ Upload all files preserving the folder structure.
 - Mobile fullscreen menu overlay (with season index)
 - Newsletter & contact forms with elegant validation + success states
 
-### Accessibility & Performance
-- Respects `prefers-reduced-motion` (animations disabled, content visible)
-- Hides custom cursor on touch devices
-- Skip-link for keyboard navigation
-- Semantic HTML5 (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<nav>`)
-- All images use `loading="lazy"` (except hero, which is `eager`)
-- All images have descriptive `alt` text
-- Preconnect to Google Fonts and Unsplash for faster loading
-- No build step required
-
 ### Responsive Breakpoints
 - Desktop: > 1366px
 - Laptop: 1024 – 1366px
@@ -144,24 +91,13 @@ Upload all files preserving the folder structure.
 - Mobile: < 768px (single-column, simplified nav, fullscreen menu)
 - Small mobile: < 540px
 
-## Browser Support
-
-Tested on:
-- Chrome 120+
-- Firefox 120+
-- Safari 16+
-- Edge 120+
-
-Requires JavaScript enabled. The site degrades gracefully with `prefers-reduced-motion: reduce` — all content remains visible, animations are disabled.
-
 ## Credits
 
-- **Brand concept & design**: QUATRÉA (fictional maison)
+- **Brand concept & design**: QUATRÉA
 - **Perfume bottle photography**: Custom-generated for QUATRÉA
-- **Editorial & landscape photography**: [Unsplash](https://unsplash.com)
 - **Typography**: Cormorant Garamond, Marcellus, Jost (Google Fonts)
 - **Animation**: GSAP, ScrollTrigger, Lenis
 
 ---
 
-© MMXXIV Maison QUATRÉA. All rights reserved.
+© QUATRÉA. All rights reserved.
