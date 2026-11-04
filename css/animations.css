@@ -1,0 +1,188 @@
+/* =====================================================================
+   QUATRÉA — animations.css
+   Keyframes, GSAP-coordinated states & transition utilities
+   ===================================================================== */
+
+/* -----------------------------------------------------------------
+   1. Keyframes
+   ----------------------------------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(1.08); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes lineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.7); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* -----------------------------------------------------------------
+   2. Animation utility classes
+   ----------------------------------------------------------------- */
+.anim-fade-in    { animation: fadeIn var(--dur-med) var(--ease-lux) both; }
+.anim-fade-up    { animation: fadeInUp var(--dur-med) var(--ease-lux) both; }
+.anim-fade-down  { animation: fadeInDown var(--dur-med) var(--ease-lux) both; }
+.anim-scale-in   { animation: scaleIn var(--dur-med) var(--ease-lux) both; }
+.anim-float      { animation: floatY 4s var(--ease-in-out) infinite; }
+.anim-spin-slow  { animation: spinSlow 28s linear infinite; }
+
+/* Staggered children — used when JS not yet hydrated */
+.stagger > * { opacity: 0; animation: fadeInUp var(--dur-med) var(--ease-lux) both; }
+.stagger > *:nth-child(1) { animation-delay: 0.08s; }
+.stagger > *:nth-child(2) { animation-delay: 0.18s; }
+.stagger > *:nth-child(3) { animation-delay: 0.28s; }
+.stagger > *:nth-child(4) { animation-delay: 0.38s; }
+.stagger > *:nth-child(5) { animation-delay: 0.48s; }
+.stagger > *:nth-child(6) { animation-delay: 0.58s; }
+
+/* -----------------------------------------------------------------
+   3. Image hover masks
+   ----------------------------------------------------------------- */
+.img-mask {
+  position: relative;
+  overflow: hidden;
+}
+.img-mask::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--cream);
+  transform-origin: bottom;
+  transform: scaleY(1);
+  transition: transform 1.2s var(--ease-lux);
+  z-index: 3;
+}
+.img-mask.is-revealed::before { transform: scaleY(0); }
+.img-mask img {
+  transform: scale(1.15);
+  transition: transform 1.6s var(--ease-lux);
+}
+.img-mask.is-revealed img { transform: scale(1); }
+
+/* Direction-aware clip reveal */
+.clip-reveal {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.4s var(--ease-lux);
+}
+.clip-reveal.is-revealed { clip-path: inset(0 0 0 0); }
+
+/* -----------------------------------------------------------------
+   4. Magnetic / hover helpers (used by interactions.js)
+   ----------------------------------------------------------------- */
+.magnetic {
+  display: inline-flex;
+  will-change: transform;
+  transition: transform 0.3s var(--ease-out);
+}
+.magnetic__inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  will-change: transform;
+  transition: transform 0.3s var(--ease-out);
+}
+
+/* Hover tint on dark images */
+.hover-tint { position: relative; }
+.hover-tint::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(22, 19, 16, 0);
+  transition: background var(--dur-med) var(--ease-lux);
+  pointer-events: none;
+}
+.hover-tint:hover::after { background: rgba(22, 19, 16, 0.18); }
+
+/* -----------------------------------------------------------------
+   5. Marquee speed variants
+   ----------------------------------------------------------------- */
+.marquee--slow .marquee__track { animation-duration: 50s; }
+.marquee--fast .marquee__track { animation-duration: 22s; }
+
+/* -----------------------------------------------------------------
+   6. Page transition overlay
+   ----------------------------------------------------------------- */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-loader);
+  background: var(--ink);
+  transform: translateY(100%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-transition__word {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 1.2rem + 4vw, 4rem);
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 0.06em;
+  opacity: 0;
+}
+.page-transition__word .accent { color: var(--gold); font-style: italic; }
+
+/* -----------------------------------------------------------------
+   7. Number counter (stats)
+   ----------------------------------------------------------------- */
+.counter {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-variant-numeric: lining-nums;
+  letter-spacing: -0.02em;
+}
+
+/* -----------------------------------------------------------------
+   8. Reduced motion
+   ----------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .marquee__track { animation: none !important; }
+  .hero__scroll-cue .bar::after { animation: none !important; opacity: 0.6; }
+  .hero__media img,
+  .page-header__media img { transform: scale(1) !important; }
+  .img-mask::before { transform: scaleY(0) !important; }
+  .img-mask img { transform: scale(1) !important; }
+}

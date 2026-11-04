@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QUATRÉA — Four Seasons, Four Fragrances</title>
+  <meta name="description" content="QUATRÉA is a maison of niche perfumery translating the four seasons into four rare fragrances: Fleur de Vie, Soleil d'Or, Bois Mystique and Nuit Éternelle." />
+  <meta name="theme-color" content="#161310" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="QUATRÉA — Maison de Parfum" />
+  <meta property="og:description" content="Four seasons, four rare fragrances. A maison of niche perfumery." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+
+  <!-- Fonts: Cormorant Garamond (serif display), Marcellus (caps), Jost (sans body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Marcellus&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Favicon (inline SVG, monogram Q) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23161310'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23A78654' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Preloader ===== -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__label">Maison de Parfum</div>
+    <div class="preloader__word">
+      <span class="preloader__char">Q</span><span class="preloader__char">U</span><span class="preloader__char">A</span><span class="preloader__char">T</span><span class="preloader__char">R</span><span class="preloader__char preloader__accent">É</span><span class="preloader__char">A</span>
+    </div>
+    <div class="preloader__line"><span class="preloader__line-fill"></span></div>
+    <div class="preloader__counter">000</div>
+  </div>
+
+  <!-- ===== Custom cursor ===== -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"><span class="cursor-follower__label"></span></div>
+
+  <!-- ===== Page transition overlay ===== -->
+  <div class="page-transition" aria-hidden="true">
+    <div class="page-transition__word">QUATR<span class="accent">É</span>A</div>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav is-dark" id="nav">
+    <div class="nav__left">
+      <span class="nav__link" style="cursor: default;">MMXXIV</span>
+    </div>
+
+    <a href="index.html" class="nav__logo" aria-label="QUATRÉA home">QUATR<span style="color:var(--gold); font-style: italic;">É</span>A</a>
+
+    <nav class="nav__right" aria-label="Primary">
+      <a href="collection.html" class="nav__link">Collection</a>
+      <a href="our-story.html" class="nav__link">Our Story</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== Mobile / tablet fullscreen menu ===== -->
+  <div class="menu-overlay" aria-hidden="true">
+    <span class="menu-overlay__close-hint">Tap a name to continue</span>
+    <div class="menu-overlay__inner">
+      <nav class="menu-overlay__nav" aria-label="Full menu">
+        <a href="index.html" class="menu-overlay__item"><span class="num">01</span><span class="label">Home</span></a>
+        <a href="spring.html" class="menu-overlay__item"><span class="num">02</span><span class="label">Spring · <span class="accent">Fleur de Vie</span></span></a>
+        <a href="summer.html" class="menu-overlay__item"><span class="num">03</span><span class="label">Summer · <span class="accent">Soleil d'Or</span></span></a>
+        <a href="autumn.html" class="menu-overlay__item"><span class="num">04</span><span class="label">Autumn · <span class="accent">Bois Mystique</span></span></a>
+        <a href="winter.html" class="menu-overlay__item"><span class="num">05</span><span class="label">Winter · <span class="accent">Nuit Éternelle</span></span></a>
+        <a href="collection.html" class="menu-overlay__item"><span class="num">06</span><span class="label">Collection</span></a>
+        <a href="our-story.html" class="menu-overlay__item"><span class="num">07</span><span class="label">Our Story</span></a>
+        <a href="contact.html" class="menu-overlay__item"><span class="num">08</span><span class="label">Contact</span></a>
+      </nav>
+      <div class="menu-overlay__meta">
+        <div class="row"><span>Maison QUATRÉA</span><a href="mailto:bonjour@quatrea.com">bonjour@quatrea.com</a></div>
+        <div class="row"><span>Atelier</span><span>14 Rue des Senteurs, Grasse — France</span></div>
+        <div class="row"><span>Suivez-nous</span><a href="#">Instagram · Pinterest</a></div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== 1. Hero ===== -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero__media">
+        <img src="assets/img/hero-bottle.png" alt="A QUATRÉA perfume bottle lit dramatically against a dark background." loading="eager" decoding="async" />
+      </div>
+
+      <div class="hero__top">
+        <span class="hero__eyebrow">Maison QUATRÉA · Est. MMXXIV</span>
+        <span class="hero__eyebrow">Maison de Parfum · Grasse</span>
+      </div>
+
+      <div class="hero__inner">
+        <h1 class="hero__title">
+          <span class="line"><span class="word">Four</span></span>
+          <span class="line"><span class="word"><em class="accent">seasons</em></span></span>
+          <span class="line"><span class="word">of scent.</span></span>
+        </h1>
+
+        <div class="hero__bottom">
+          <div>
+            <p class="hero__sub">A maison of niche perfumery translating the four seasons into four rare fragrances — each distilled from the light, the breath and the memory of a single moment in the year.</p>
+            <div class="hero__cta" style="margin-top: 2rem;">
+              <a href="collection.html" class="btn btn--light magnetic" data-magnet="0.25"><span class="magnetic__inner">Discover the Collection</span></a>
+              <a href="our-story.html" class="btn btn--ghost btn--light link-underline link-underline--light" style="border:none;padding:0;">Read our story</a>
+            </div>
+          </div>
+
+          <div class="hero__scroll-cue">
+            <span>Scroll</span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__corner">
+        № 001 — MMXXIV<br />
+        Grasse · France
+      </div>
+    </section>
+
+    <!-- ===== 2. Marquee strip ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__item">QUATRÉA <span class="dot"></span> <span class="italic">Fleur de Vie</span> <span class="dot"></span> Soleil d'Or <span class="dot"></span> <span class="italic">Bois Mystique</span> <span class="dot"></span> Nuit Éternelle <span class="dot"></span> </div>
+        <div class="marquee__item">QUATRÉA <span class="dot"></span> <span class="italic">Fleur de Vie</span> <span class="dot"></span> Soleil d'Or <span class="dot"></span> <span class="italic">Bois Mystique</span> <span class="dot"></span> Nuit Éternelle <span class="dot"></span> </div>
+      </div>
+    </div>
+
+    <!-- ===== 3. Intro / brand statement ===== -->
+    <section class="section intro">
+      <div class="container container--wide">
+        <div class="intro__grid">
+          <div class="intro__num">№ 01 — The Maison</div>
+
+          <h2 class="intro__statement">
+            <span class="split-line"><span class="split-line__inner">Each QUATRÉA fragrance is a</span></span>
+            <span class="split-line"><span class="split-line__inner"><em class="accent">love letter</em> to a single season —</span></span>
+            <span class="split-line"><span class="split-line__inner">its light, its breath, its colour,</span></span>
+            <span class="split-line"><span class="split-line__inner">and its <em class="accent">memory.</em></span></span>
+          </h2>
+
+          <aside class="intro__side">
+            <p class="intro__paragraph">Founded in Grasse — the historic capital of perfumery — QUATRÉA is a small maison devoted to a single, patient idea: that every season carries its own scent, and that scent deserves to be honoured with rare materials and unhurried craft.</p>
+            <p class="intro__paragraph">Our four fragrances are composed in limited quantities, aged in glass for a full lunar cycle, and bottled by hand.</p>
+            <p class="intro__signature">— La Maison QUATRÉA</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Seasons horizontal scroll ===== -->
+    <section class="seasons" id="seasons" aria-label="The four seasons">
+      <div class="seasons__pin">
+        <div class="seasons__header">
+          <span class="section-tag">The Four Seasons</span>
+          <h2 class="h2 text-light" style="margin-top: 1rem;">A year, <em class="serif italic" style="color: var(--gold);">distilled.</em></h2>
+        </div>
+
+        <div class="seasons__track">
+
+          <!-- Spring -->
+          <article class="season-panel season-panel--spring">
+            <div class="season-panel__media">
+              <span class="season-panel__index">№ 01 / Spring</span>
+              <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=85" alt="Soft pink blossoms in early spring light." loading="lazy" />
+            </div>
+            <div class="season-panel__content">
+              <span class="season-panel__season">Spring · Printemps</span>
+              <h3 class="season-panel__name">Fleur <em class="accent">de Vie</em></h3>
+              <p class="season-panel__desc">A whisper of pear blossom and white peony — the first warm breath after winter's silence. Luminous, tender, alive.</p>
+              <div class="season-panel__notes">
+                <span>Pear Blossom</span><span>White Peony</span><span>Musk</span>
+              </div>
+              <a href="spring.html" class="btn btn--light magnetic" data-magnet="0.2" style="margin-top: 1rem;"><span class="magnetic__inner">Discover Spring</span></a>
+            </div>
+          </article>
+
+          <!-- Summer -->
+          <article class="season-panel season-panel--summer">
+            <div class="season-panel__media">
+              <span class="season-panel__index">№ 02 / Summer</span>
+              <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=85" alt="Sun-drenched golden field at the height of summer." loading="lazy" />
+            </div>
+            <div class="season-panel__content">
+              <span class="season-panel__season">Summer · Été</span>
+              <h3 class="season-panel__name">Soleil <em class="accent">d'Or</em></h3>
+              <p class="season-panel__desc">Sun-warmed fig leaf and golden neroli — the slow heat of a Mediterranean afternoon, distilled into a single drop.</p>
+              <div class="season-panel__notes">
+                <span>Fig Leaf</span><span>Neroli</span><span>Cedar</span>
+              </div>
+              <a href="summer.html" class="btn btn--light magnetic" data-magnet="0.2" style="margin-top: 1rem;"><span class="magnetic__inner">Discover Summer</span></a>
+            </div>
+          </article>
+
+          <!-- Autumn -->
+          <article class="season-panel season-panel--autumn">
+            <div class="season-panel__media">
+              <span class="season-panel__index">№ 03 / Autumn</span>
+              <img src="https://images.unsplash.com/photo-1507371341162-763b5e419408?auto=format&fit=crop&w=1400&q=85" alt="Amber autumn leaves catching low golden light." loading="lazy" />
+            </div>
+            <div class="season-panel__content">
+              <span class="season-panel__season">Autumn · Automne</span>
+              <h3 class="season-panel__name">Bois <em class="accent">Mystique</em></h3>
+              <p class="season-panel__desc">Burnt cedar and smoked vetiver — the hush of leaves returning to the earth. Deep, contemplative, grounded.</p>
+              <div class="season-panel__notes">
+                <span>Cedar</span><span>Vetiver</span><span>Tobacco</span>
+              </div>
+              <a href="autumn.html" class="btn btn--light magnetic" data-magnet="0.2" style="margin-top: 1rem;"><span class="magnetic__inner">Discover Autumn</span></a>
+            </div>
+          </article>
+
+          <!-- Winter -->
+          <article class="season-panel season-panel--winter">
+            <div class="season-panel__media">
+              <span class="season-panel__index">№ 04 / Winter</span>
+              <img src="https://images.unsplash.com/photo-1457269449834-928af64c684d?auto=format&fit=crop&w=1400&q=85" alt="A dark, atmospheric winter scene." loading="lazy" />
+            </div>
+            <div class="season-panel__content">
+              <span class="season-panel__season">Winter · Hiver</span>
+              <h3 class="season-panel__name">Nuit <em class="accent">Éternelle</em></h3>
+              <p class="season-panel__desc">Black amber and frosted iris — the quiet elegance of a winter midnight. A scent that lingers like a held breath.</p>
+              <div class="season-panel__notes">
+                <span>Black Amber</span><span>Iris</span><span>Oud</span>
+              </div>
+              <a href="winter.html" class="btn btn--light magnetic" data-magnet="0.2" style="margin-top: 1rem;"><span class="magnetic__inner">Discover Winter</span></a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="seasons__progress">
+          <span class="seasons__progress-label">01 — SPRING</span>
+          <div class="seasons__progress-track"><span class="seasons__progress-fill"></span></div>
+          <span class="seasons__progress-label">04 — WINTER</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Bottle showcase ===== -->
+    <section class="section bottles" aria-label="The four fragrances">
+      <div class="container container--wide">
+        <div class="bottles__header">
+          <div>
+            <span class="section-tag" data-reveal="up">№ 02 — The Fragrances</span>
+            <h2 class="bottles__title" style="margin-top: 1rem;" data-reveal="up" data-reveal-delay="0.05">Four bottles, <em class="accent">one year.</em></h2>
+          </div>
+          <p class="bottles__intro" data-reveal="up" data-reveal-delay="0.1">Each fragrance is composed from rare natural extracts, aged in glass, and bottled by hand at our atelier in Grasse. Available in 50ml and 100ml Eau de Parfum.</p>
+        </div>
+
+        <div class="bottles__grid">
+
+          <!-- Fleur de Vie -->
+          <a href="spring.html" class="bottle" data-cursor="View">
+            <div class="bottle__media img-mask">
+              <span class="bottle__tag">№ 01</span>
+              <img src="assets/img/bottle-spring.png" alt="Fleur de Vie — a clear glass perfume bottle with pale pink liquid." loading="lazy" />
+            </div>
+            <span class="bottle__season">Spring</span>
+            <h3 class="bottle__name">Fleur <em class="accent">de Vie</em></h3>
+            <p class="bottle__notes">Pear Blossom · White Peony · Musk</p>
+            <div class="bottle__meta">
+              <span class="bottle__price numeric">€265</span>
+              <span class="bottle__link">Discover <span style="font-size:1.1em;">→</span></span>
+            </div>
+          </a>
+
+          <!-- Soleil d'Or -->
+          <a href="summer.html" class="bottle" data-cursor="View">
+            <div class="bottle__media img-mask">
+              <span class="bottle__tag">№ 02</span>
+              <img src="assets/img/bottle-summer.png" alt="Soleil d'Or — an amber glass perfume bottle with golden liquid." loading="lazy" />
+            </div>
+            <span class="bottle__season">Summer</span>
+            <h3 class="bottle__name">Soleil <em class="accent">d'Or</em></h3>
+            <p class="bottle__notes">Fig Leaf · Neroli · Cedar</p>
+            <div class="bottle__meta">
+              <span class="bottle__price numeric">€285</span>
+              <span class="bottle__link">Discover <span style="font-size:1.1em;">→</span></span>
+            </div>
+          </a>
+
+          <!-- Bois Mystique -->
+          <a href="autumn.html" class="bottle" data-cursor="View">
+            <div class="bottle__media img-mask">
+              <span class="bottle__tag">№ 03</span>
+              <img src="assets/img/bottle-autumn.png" alt="Bois Mystique — a dark amber glass perfume bottle on walnut wood." loading="lazy" />
+            </div>
+            <span class="bottle__season">Autumn</span>
+            <h3 class="bottle__name">Bois <em class="accent">Mystique</em></h3>
+            <p class="bottle__notes">Cedar · Vetiver · Tobacco</p>
+            <div class="bottle__meta">
+              <span class="bottle__price numeric">€305</span>
+              <span class="bottle__link">Discover <span style="font-size:1.1em;">→</span></span>
+            </div>
+          </a>
+
+          <!-- Nuit Éternelle -->
+          <a href="winter.html" class="bottle" data-cursor="View">
+            <div class="bottle__media img-mask">
+              <span class="bottle__tag">№ 04</span>
+              <img src="assets/img/bottle-winter.png" alt="Nuit Éternelle — a matte black glass perfume bottle against midnight blue." loading="lazy" />
+            </div>
+            <span class="bottle__season">Winter</span>
+            <h3 class="bottle__name">Nuit <em class="accent">Éternelle</em></h3>
+            <p class="bottle__notes">Black Amber · Iris · Oud</p>
+            <div class="bottle__meta">
+              <span class="bottle__price numeric">€325</span>
+              <span class="bottle__link">Discover <span style="font-size:1.1em;">→</span></span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Fragrance notes pyramid ===== -->
+    <section class="section notes" aria-label="The structure of a QUATRÉA fragrance">
+      <div class="notes__bg" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1521575107034-e0fa0b594529?auto=format&fit=crop&w=1800&q=80" alt="" loading="lazy" />
+      </div>
+      <div class="container container--wide notes__inner">
+        <div class="notes__header">
+          <div>
+            <span class="section-tag" data-reveal="up">№ 03 — The Architecture</span>
+            <h2 class="notes__title" style="margin-top: 1rem;" data-reveal="up" data-reveal-delay="0.05">A fragrance has <em class="accent">three voices.</em></h2>
+          </div>
+          <p class="notes__intro" data-reveal="up" data-reveal-delay="0.1">Every QUATRÉA perfume unfolds in three movements — a luminous opening, a beating heart, and a slow, lingering memory. Together they form a scent that lives for hours, and remembers for longer.</p>
+        </div>
+
+        <div class="notes__grid">
+          <article class="note-card">
+            <span class="note-card__num">i.</span>
+            <span class="note-card__layer">Prélude · Top Notes</span>
+            <h3 class="note-card__title">The Opening</h3>
+            <p class="note-card__desc">The first breath of a fragrance — bright, volatile, immediate. Lasts from the first minute to the first quarter hour.</p>
+            <ul class="note-card__list">
+              <li>Bergamot</li>
+              <li>Pink Pepper</li>
+              <li>Pear Blossom</li>
+              <li>Mandarin</li>
+            </ul>
+          </article>
+
+          <article class="note-card">
+            <span class="note-card__num">ii.</span>
+            <span class="note-card__layer">Cœur · Heart Notes</span>
+            <h3 class="note-card__title">The Character</h3>
+            <p class="note-card__desc">The soul of the perfume — the floral, spicy or vegetal signature that defines its identity over the following hours.</p>
+            <ul class="note-card__list">
+              <li>White Peony</li>
+              <li>Neroli</li>
+              <li>Iris</li>
+              <li>Fig Leaf</li>
+            </ul>
+          </article>
+
+          <article class="note-card">
+            <span class="note-card__num">iii.</span>
+            <span class="note-card__layer">Souvenir · Base Notes</span>
+            <h3 class="note-card__title">The Memory</h3>
+            <p class="note-card__desc">The slow, warm residue — woods, resins and ambers that linger on the skin long after the wearer has left the room.</p>
+            <ul class="note-card__list">
+              <li>Cedarwood</li>
+              <li>Black Amber</li>
+              <li>Vetiver</li>
+              <li>Oud · Musk</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. Philosophy ===== -->
+    <section class="philosophy" aria-label="Our philosophy">
+      <div class="container container--wide">
+        <div class="philosophy__grid">
+          <div class="philosophy__media img-mask">
+            <img src="https://images.unsplash.com/photo-1485231183945-fffde7cc051e?auto=format&fit=crop&w=1200&q=85" alt="A perfumer at work, hands holding a glass vial." loading="lazy" />
+            <span class="philosophy__caption">Atelier · Grasse</span>
+          </div>
+
+          <div class="philosophy__content">
+            <span class="section-tag" data-reveal="up">№ 04 — Our Philosophy</span>
+            <blockquote class="philosophy__quote" data-reveal="up" data-reveal-delay="0.05">
+              "A fragrance is not made of essences alone — it is made of the <em class="accent">season it remembers.</em> We do not invent perfumes; we merely listen to the year, and give it a voice."
+            </blockquote>
+            <p class="philosophy__text" data-reveal="up" data-reveal-delay="0.1">Each composition begins in the field — with a blossom, a leaf, a piece of bark — and ends in a hand-numbered bottle. We work in small batches, with patience as our only luxury.</p>
+            <div class="philosophy__author" data-reveal="up" data-reveal-delay="0.15">
+              <span class="name">Hélène Mercier</span>
+              Founder &amp; Master Perfumer
+            </div>
+            <a href="our-story.html" class="link-underline" data-reveal="up" data-reveal-delay="0.2">Read the full story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8. Collection showcase ===== -->
+    <section class="section collection" aria-label="Collection showcase">
+      <div class="container container--wide">
+        <div class="collection__header">
+          <div>
+            <span class="section-tag" data-reveal="up">№ 05 — The Collection</span>
+            <h2 class="collection__title" style="margin-top: 1rem;" data-reveal="up" data-reveal-delay="0.05">A year in <em class="accent">four chapters.</em></h2>
+          </div>
+          <p class="collection__intro" data-reveal="up" data-reveal-delay="0.1">A curated selection from the QUATRÉA atelier — each fragrance an invitation to revisit a single moment of the year.</p>
+        </div>
+
+        <div class="collection__row">
+          <a href="spring.html" class="collection__cell collection__cell--tall" data-cursor="View">
+            <img src="assets/img/bottle-spring.png" alt="Fleur de Vie — spring fragrance presentation." loading="lazy" />
+            <div class="collection__cell-meta">
+              <div>
+                <div class="collection__cell-season">№ 01 · Spring</div>
+                <div class="collection__cell-name">Fleur <em class="accent">de Vie</em></div>
+              </div>
+              <span class="collection__cell-num">i.</span>
+            </div>
+          </a>
+          <a href="summer.html" class="collection__cell collection__cell--wide" data-cursor="View">
+            <img src="assets/img/bottle-summer.png" alt="Soleil d'Or — summer fragrance presentation." loading="lazy" />
+            <div class="collection__cell-meta">
+              <div>
+                <div class="collection__cell-season">№ 02 · Summer</div>
+                <div class="collection__cell-name">Soleil <em class="accent">d'Or</em></div>
+              </div>
+              <span class="collection__cell-num">ii.</span>
+            </div>
+          </a>
+          <a href="autumn.html" class="collection__cell collection__cell--square" data-cursor="View">
+            <img src="assets/img/bottle-autumn.png" alt="Bois Mystique — autumn fragrance presentation." loading="lazy" />
+            <div class="collection__cell-meta">
+              <div>
+                <div class="collection__cell-season">№ 03 · Autumn</div>
+                <div class="collection__cell-name">Bois <em class="accent">Mystique</em></div>
+              </div>
+              <span class="collection__cell-num">iii.</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="collection__row collection__row--alt">
+          <a href="winter.html" class="collection__cell collection__cell--wide" data-cursor="View">
+            <img src="assets/img/bottle-winter.png" alt="Nuit Éternelle — winter fragrance presentation." loading="lazy" />
+            <div class="collection__cell-meta">
+              <div>
+                <div class="collection__cell-season">№ 04 · Winter</div>
+                <div class="collection__cell-name">Nuit <em class="accent">Éternelle</em></div>
+              </div>
+              <span class="collection__cell-num">iv.</span>
+            </div>
+          </a>
+          <a href="our-story.html" class="collection__cell collection__cell--tall" data-cursor="Story">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=900&q=85" alt="The QUATRÉA atelier — editorial." loading="lazy" />
+            <div class="collection__cell-meta">
+              <div>
+                <div class="collection__cell-season">Maison</div>
+                <div class="collection__cell-name">The <em class="accent">Atelier</em></div>
+              </div>
+              <span class="collection__cell-num">·</span>
+            </div>
+          </a>
+          <a href="collection.html" class="collection__cell collection__cell--square" data-cursor="All">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85" alt="Editorial photography for the QUATRÉA collection." loading="lazy" />
+            <div class="collection__cell-meta">
+              <div>
+                <div class="collection__cell-season">View All</div>
+                <div class="collection__cell-name">The <em class="accent">Collection</em></div>
+              </div>
+              <span class="collection__cell-num">→</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="collection__cta">
+          <a href="collection.html" class="btn magnetic" data-magnet="0.25"><span class="magnetic__inner">View the Full Collection</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. Newsletter ===== -->
+    <section class="newsletter" aria-label="Newsletter subscription">
+      <div class="newsletter__bg" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?auto=format&fit=crop&w=1800&q=80" alt="" loading="lazy" />
+      </div>
+      <div class="container container--wide">
+        <div class="newsletter__inner">
+          <div>
+            <span class="section-tag" data-reveal="up">№ 06 — The List</span>
+            <h2 class="newsletter__title" data-reveal="up" data-reveal-delay="0.05">An invitation, <em class="accent">in advance.</em></h2>
+            <p class="newsletter__desc" data-reveal="up" data-reveal-delay="0.1">Join the QUATRÉA list to receive private previews, atelier dispatches and the first invitation to each seasonal release — before it is offered to the world.</p>
+          </div>
+
+          <form class="newsletter__form" novalidate>
+            <div class="newsletter__row">
+              <div class="newsletter__field">
+                <label for="nl-name">Name</label>
+                <input type="text" id="nl-name" name="name" placeholder="Your name" autocomplete="given-name" />
+              </div>
+              <div class="newsletter__field">
+                <label for="nl-email">Email</label>
+                <input type="email" id="nl-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              </div>
+            </div>
+            <label class="newsletter__check">
+              <input type="checkbox" required />
+              <span>I consent to receive occasional correspondence from QUATRÉA. I may unsubscribe at any time.</span>
+            </label>
+            <div class="newsletter__submit-row">
+              <button type="submit" class="btn btn--light magnetic" data-magnet="0.2"><span class="magnetic__inner">Receive the Invitation</span></button>
+              <span class="newsletter__success">Merci. Your invitation is on its way.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 10. Footer ===== -->
+  <footer class="footer">
+    <div class="container container--wide">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">QUATR<span class="accent">É</span>A</div>
+          <p class="footer__tagline">A maison of niche perfumery, translating the four seasons into four rare fragrances. Composed in Grasse, bottled by hand.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Fragrances</h4>
+          <ul>
+            <li><a href="spring.html">Fleur de Vie</a></li>
+            <li><a href="summer.html">Soleil d'Or</a></li>
+            <li><a href="autumn.html">Bois Mystique</a></li>
+            <li><a href="winter.html">Nuit Éternelle</a></li>
+            <li><a href="collection.html">The Collection</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Maison</h4>
+          <ul>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="our-story.html#philosophy">Philosophy</a></li>
+            <li><a href="our-story.html#atelier">The Atelier</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Correspondance</h4>
+          <ul>
+            <li><a href="mailto:bonjour@quatrea.com">bonjour@quatrea.com</a></li>
+            <li><a href="contact.html">Atelier Visits</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span data-year>2024</span> Maison QUATRÉA · All rights reserved</span>
+        <div class="footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Scripts (deferred, in dependency order) ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+
+  <script src="js/smooth-scroll.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+
+  <script>
+    // Mark JS-enabled
+    document.documentElement.classList.remove("no-js");
+    document.documentElement.classList.add("js");
+    // Update toggle aria on click
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggle = document.querySelector(".nav__toggle");
+      if (toggle) {
+        toggle.addEventListener("click", function () {
+          var open = document.querySelector(".menu-overlay").classList.contains("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      }
+    });
+  </script>
+</body>
+</html>

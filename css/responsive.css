@@ -1,0 +1,238 @@
+/* =====================================================================
+   QUATRÉA — responsive.css
+   Breakpoints:
+     - 1366px  Large laptop
+     - 1024px  Tablet landscape
+     -  768px  Tablet portrait
+     -  540px  Mobile
+   ===================================================================== */
+
+/* -----------------------------------------------------------------
+   Large laptop (down from 1440)
+   ----------------------------------------------------------------- */
+@media (max-width: 1366px) {
+  :root {
+    --s-xl: 6rem;
+    --s-2xl: 9rem;
+  }
+  .bottles__grid { gap: 1.6rem; }
+}
+
+/* -----------------------------------------------------------------
+   Tablet landscape (down from 1024)
+   ----------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --t-display: clamp(3.4rem, 2rem + 8vw, 9rem);
+    --s-2xl: 8rem;
+  }
+
+  /* Asymmetric collapses */
+  .asym, .asym--rev {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .asym-3 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Nav: hide desktop links, show toggle */
+  .nav__left .nav__link,
+  .nav__right .nav__link { display: none; }
+  .nav__toggle { display: block; }
+  .nav__logo { font-size: 1.35rem; }
+  .nav__left, .nav__right { gap: 1rem; min-width: 32px; }
+
+  /* Hero adjustments */
+  .hero__top { top: 6.5rem; }
+  .hero__corner { display: none; }
+
+  /* Intro grid */
+  .intro__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .intro__num { position: static; margin-bottom: 1rem; }
+  .intro__side { padding-top: 0; }
+
+  /* Seasons horizontal becomes vertical on tablet */
+  .seasons__pin { height: auto; min-height: 0; }
+  .seasons__track {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .season-panel {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: 90svh;
+    grid-template-columns: 1fr;
+    padding-block: 5rem 4rem;
+    gap: 2rem;
+  }
+  .season-panel__media { aspect-ratio: 4/3; }
+  .seasons__progress { display: none; }
+  .seasons__header { position: static; padding: 5rem var(--gutter) 0; }
+
+  /* Bottles 4-up → 2-up */
+  .bottles__grid { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
+  .bottles__header { grid-template-columns: 1fr; gap: 1rem; }
+
+  /* Notes 3-up → 1-up stacked or kept at 3 if room */
+  .notes__header { grid-template-columns: 1fr; gap: 1.5rem; }
+  .notes__grid { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  .note-card { padding: 1.4rem 1.2rem; }
+
+  /* Philosophy */
+  .philosophy__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .philosophy__media { aspect-ratio: 4/3; max-width: 100%; }
+
+  /* Collection rows */
+  .collection__header { grid-template-columns: 1fr; gap: 1rem; }
+  .collection__row,
+  .collection__row--alt {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .collection__cell--tall { aspect-ratio: 3/4; }
+  .collection__cell--wide { aspect-ratio: 4/3; }
+  .collection__cell--square { aspect-ratio: 1/1; }
+
+  /* Newsletter */
+  .newsletter__inner { grid-template-columns: 1fr; gap: 3rem; }
+  .newsletter__row { grid-template-columns: 1fr; gap: 1.2rem; }
+
+  /* Contact form */
+  .contact-form__row { grid-template-columns: 1fr; gap: 1.2rem; }
+
+  /* Footer */
+  .footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+
+  /* Page header */
+  .page-header { height: 70svh; }
+  .page-header__meta { display: none; }
+}
+
+/* -----------------------------------------------------------------
+   Tablet portrait (down from 768)
+   ----------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --s-xl: 5rem;
+    --s-2xl: 6.5rem;
+    --t-display: clamp(2.8rem, 1.8rem + 8vw, 6rem);
+    --t-h1: clamp(2.4rem, 1.8rem + 4vw, 4rem);
+    --gutter: clamp(1.1rem, 0.9rem + 1vw, 1.8rem);
+  }
+
+  /* Nav logo slightly smaller */
+  .nav__logo { font-size: 1.25rem; letter-spacing: 0.14em; }
+  .nav { padding-block: 1.1rem; }
+
+  /* Hero */
+  .hero { min-height: 560px; }
+  .hero__inner { padding: 6rem var(--gutter) 2rem; }
+  .hero__top { top: 5.5rem; flex-direction: column; gap: 0.8rem; }
+  .hero__bottom { flex-direction: column; align-items: flex-start; gap: 1.6rem; }
+  .hero__cta { flex-direction: column; align-items: stretch; gap: 0.8rem; }
+  .hero__cta .btn { justify-content: center; }
+  .hero__scroll-cue { display: none; }
+  /* Stronger overlay on tablet/mobile for text contrast */
+  .hero__media::after {
+    background: linear-gradient(180deg, rgba(22,19,16,0.7) 0%, rgba(22,19,16,0.45) 40%, rgba(22,19,16,0.85) 100%);
+  }
+
+  /* Marquee smaller */
+  .marquee__item { font-size: clamp(1.1rem, 0.9rem + 1vw, 1.6rem); gap: 1.6rem; }
+  .marquee__item .dot { width: 4px; height: 4px; }
+
+  /* Bottles → single column */
+  .bottles__grid { grid-template-columns: 1fr; gap: 2.4rem; }
+  .bottle__media { aspect-ratio: 4/5; }
+  .bottles__title { font-size: clamp(2.4rem, 2rem + 3vw, 3.2rem); }
+
+  /* Notes → single column */
+  .notes__grid { grid-template-columns: 1fr; gap: 1.2rem; }
+
+  /* Collection → single column */
+  .collection__row,
+  .collection__row--alt {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .collection__cell--tall,
+  .collection__cell--wide,
+  .collection__cell--square { aspect-ratio: 4/5; }
+
+  /* Newsletter */
+  .newsletter__field input { font-size: 1.1rem; }
+  .newsletter__submit-row { flex-direction: column; align-items: stretch; }
+  .newsletter__submit-row .btn { justify-content: center; }
+
+  /* Footer */
+  .footer__top { grid-template-columns: 1fr; gap: 2rem; }
+  .footer__brand .footer__logo { font-size: 1.8rem; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+
+  /* Page header */
+  .page-header { height: 65svh; min-height: 460px; }
+  .page-header__title { font-size: clamp(2.4rem, 1.8rem + 5vw, 4rem); }
+
+  /* Menu overlay */
+  .menu-overlay__inner { grid-template-columns: 1fr; gap: 2rem; align-items: start; padding-top: 6rem; }
+  .menu-overlay__item { font-size: clamp(1.6rem, 1.2rem + 3vw, 2.4rem); }
+  .menu-overlay__meta { gap: 1rem; font-size: 0.7rem; }
+}
+
+/* -----------------------------------------------------------------
+   Mobile (down from 540)
+   ----------------------------------------------------------------- */
+@media (max-width: 540px) {
+  :root {
+    --s-xl: 4rem;
+    --s-2xl: 5.5rem;
+  }
+
+  .nav { padding-block: 1rem; padding-inline: 1.1rem; }
+  .nav__logo { font-size: 1.15rem; }
+
+  /* Hero */
+  .hero { min-height: 520px; }
+  .hero__inner { padding: 5rem 1.1rem 1.6rem; }
+  .hero__sub { font-size: 0.95rem; }
+
+  /* Bottles */
+  .bottle__name { font-size: 1.4rem; }
+
+  /* Notes */
+  .note-card { padding: 1.2rem 1rem; }
+  .note-card__title { font-size: 1.4rem; }
+
+  /* Marquee */
+  .marquee { padding-block: 1rem; }
+
+  /* Page header */
+  .page-header { height: 60svh; min-height: 420px; }
+  .page-header__title { font-size: clamp(2rem, 1.5rem + 4vw, 3rem); }
+
+  /* Cursor off on touch */
+  .cursor, .cursor-follower { display: none !important; }
+}
+
+/* -----------------------------------------------------------------
+   Reduced motion (extra safety net for layout-triggering anims)
+   ----------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) and (max-width: 1024px) {
+  .season-panel { min-height: auto; padding-block: 4rem 3rem; }
+}
+
+/* -----------------------------------------------------------------
+   Print
+   ----------------------------------------------------------------- */
+@media print {
+  .nav, .preloader, .cursor, .cursor-follower, .menu-overlay, .page-transition { display: none !important; }
+  body { color: #000; background: #fff; }
+  .section { padding-block: 1rem; }
+}
