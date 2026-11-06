@@ -37,9 +37,9 @@
 
   <header class="nav is-dark" id="nav">
     <div class="nav__left">
-      <a href="index.html" class="nav__link">← Maison</a>
+          <a href="index.html" class="nav__logo" aria-label="QUATRÉA home">QUATR<span style="color:var(--gold); font-style: italic;">É</span>A</a>
     </div>
-    <a href="index.html" class="nav__logo" aria-label="QUATRÉA home">QUATR<span style="color:var(--gold); font-style: italic;">É</span>A</a>
+    <a href="" class="nav__logo"></a>
     <nav class="nav__right" aria-label="Primary">
       <a href="collection.html" class="nav__link is-active">Collection</a>
       <a href="our-story.html" class="nav__link">Our Story</a>
@@ -62,7 +62,7 @@
         <a href="contact.html" class="menu-overlay__item"><span class="num">08</span><span class="label">Contact</span></a>
       </nav>
       <div class="menu-overlay__meta">
-        <div class="row"><span>Maison QUATRÉA</span><a href="mailto:bonjour@quatrea.com">bonjour@quatrea.com</a></div>
+        <div class="row"><span>Maison QUATRÉA</span><a href="mailto:info@quatrea.com">info@quatrea.com</a></div>
         <div class="row"><span>Atelier</span><span>14 Rue des Senteurs, Grasse — France</span></div>
         <div class="row"><span>Suivez-nous</span><a href="#">Instagram · Pinterest</a></div>
       </div>
@@ -77,8 +77,6 @@
         <img src="assets/img/hero-bottle.png" alt="A QUATRÉA perfume bottle against a dark cinematic background." loading="eager" decoding="async" />
       </div>
       <div class="page-header__meta">
-        Maison QUATRÉA<br />
-        Collection MMXXIV<br />
         Four Fragrances
       </div>
       <div class="page-header__inner">
@@ -88,11 +86,11 @@
       </div>
     </section>
 
-    <!-- ===== Marquee ===== -->
+    <!-- ===== Marquee strip ===== -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <div class="marquee__item">QUATRÉA <span class="dot"></span> <span class="italic">Fleur de Vie</span> <span class="dot"></span> Soleil d'Or <span class="dot"></span> <span class="italic">Bois Mystique</span> <span class="dot"></span> Nuit Éternelle <span class="dot"></span> </div>
-        <div class="marquee__item">QUATRÉA <span class="dot"></span> <span class="italic">Fleur de Vie</span> <span class="dot"></span> Soleil d'Or <span class="dot"></span> <span class="italic">Bois Mystique</span> <span class="dot"></span> Nuit Éternelle <span class="dot"></span> </div>
+        <div class="marquee__item">QUATRÉA <span class="dot"></span> <span class="italic">Floral And Elegant</span> <span class="dot"></span> Warm And Sophisticated <span class="dot"></span> <span class="italic">Deep, Woody And Mysterious</span> <span class="dot"></span> Timeless And Captivating <span class="dot"></span> </div>
+        <div class="marquee__item">QUATRÉA <span class="dot"></span> <span class="italic">Floral And Elegant</span> <span class="dot"></span> Warm And Sophisticated <span class="dot"></span> <span class="italic">Deep, Woody And Mysterious</span> <span class="dot"></span> Timeless And Captivating <span class="dot"></span> </div>
       </div>
     </div>
 
@@ -101,8 +99,8 @@
       <div class="container container--wide">
         <div class="row-between" style="margin-bottom: 4rem;">
           <div>
-            <span class="section-tag" data-reveal="up">№ 01 — The Four Fragrances</span>
-            <h2 class="h1" style="margin-top: 1rem;" data-reveal="up" data-reveal-delay="0.05">Four bottles, <em class="accent">one year.</em></h2>
+            <span class="section-tag" data-reveal="up" style="color: var(--gold);">№ 01 — The Four Fragrances</span>
+            <h2 class="h1" style="margin-top: 1rem;letter-spacing: -3px;" data-reveal="up" data-reveal-delay="0.05">Four bottles, <em class="accent" style="color: var(--gold);">Four seasons.</em></h2>
           </div>
           <p class="lead" style="max-width: 38ch;" data-reveal="up" data-reveal-delay="0.1">Available in 50ml and 100ml Eau de Parfum. Each bottle is hand-numbered and presented in a linen-lined case.</p>
         </div>
@@ -184,7 +182,7 @@
             </div>
           </div>
           <div class="img-mask" style="aspect-ratio: 4/5; background: var(--charcoal);">
-            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85" alt="Editorial still life — clothing on wooden hangers against a plain wall." loading="lazy" />
+            <img src="assets/img/perfume-collections.jpeg" alt="Editorial still life — clothing on wooden hangers against a plain wall." loading="lazy" />
           </div>
         </div>
       </div>
@@ -195,7 +193,7 @@
       <div class="container container--wide">
         <div class="notes__header" style="grid-template-columns: 1fr 1fr;">
           <div>
-            <span class="section-tag" data-reveal="up">№ 03 — The Architecture</span>
+            <span class="section-tag" data-reveal="up" style="color: var(--gold);">№ 03 — The Architecture</span>
             <h2 class="h1" style="margin-top: 1rem;" data-reveal="up" data-reveal-delay="0.05">A fragrance has <em class="accent">three voices.</em></h2>
           </div>
           <p class="lead" data-reveal="up" data-reveal-delay="0.1">Every QUATRÉA perfume unfolds in three movements — a luminous opening, a beating heart, and a slow, lingering memory. Together they form a scent that lives for hours, and remembers for longer.</p>
@@ -203,38 +201,35 @@
         <div class="notes__grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 4rem;">
           <article class="note-card" style="background: var(--paper); border-color: var(--line); color: var(--ink);">
             <span class="note-card__num">i.</span>
-            <span class="note-card__layer" style="color: var(--gold);">Prélude · Top Notes</span>
+            <span class="note-card__layer" style="color: var(--gold);">Top Notes</span>
             <h3 class="note-card__title" style="color: var(--ink);">The Opening</h3>
             <p class="note-card__desc" style="color: var(--smoke);">The first breath of a fragrance — bright, volatile, immediate. Lasts from the first minute to the first quarter hour.</p>
             <ul class="note-card__list" style="color: var(--smoke);">
-              <li><span style="color: var(--gold);">—</span> Bergamot</li>
-              <li><span style="color: var(--gold);">—</span> Pink Pepper</li>
-              <li><span style="color: var(--gold);">—</span> Pear Blossom</li>
-              <li><span style="color: var(--gold);">—</span> Mandarin</li>
+              <li><span style="color: var(--gold);">Pink Pepper</span></li>
+              <li><span style="color: var(--gold);">Pear Blossom</span></li>
+              <li><span style="color: var(--gold);">Mandarin</span></li>
             </ul>
           </article>
           <article class="note-card" style="background: var(--paper); border-color: var(--line); color: var(--ink);">
             <span class="note-card__num">ii.</span>
-            <span class="note-card__layer" style="color: var(--gold);">Cœur · Heart Notes</span>
+            <span class="note-card__layer" style="color: var(--gold);">Heart Notes</span>
             <h3 class="note-card__title" style="color: var(--ink);">The Character</h3>
             <p class="note-card__desc" style="color: var(--smoke);">The soul of the perfume — the floral, spicy or vegetal signature that defines its identity over the following hours.</p>
             <ul class="note-card__list" style="color: var(--smoke);">
-              <li><span style="color: var(--gold);">—</span> White Peony</li>
-              <li><span style="color: var(--gold);">—</span> Neroli</li>
-              <li><span style="color: var(--gold);">—</span> Iris</li>
-              <li><span style="color: var(--gold);">—</span> Vetiver</li>
+              <li><span style="color: var(--gold);">White Peony</span></li>
+              <li><span style="color: var(--gold);">Iris</span></li>
+              <li><span style="color: var(--gold);">Vetiver</span></li>
             </ul>
           </article>
           <article class="note-card" style="background: var(--paper); border-color: var(--line); color: var(--ink);">
             <span class="note-card__num">iii.</span>
-            <span class="note-card__layer" style="color: var(--gold);">Souvenir · Base Notes</span>
+            <span class="note-card__layer" style="color: var(--gold);">Base Notes</span>
             <h3 class="note-card__title" style="color: var(--ink);">The Memory</h3>
             <p class="note-card__desc" style="color: var(--smoke);">The slow, warm residue — woods, resins and ambers that linger on the skin long after the wearer has left the room.</p>
             <ul class="note-card__list" style="color: var(--smoke);">
-              <li><span style="color: var(--gold);">—</span> Cedarwood</li>
-              <li><span style="color: var(--gold);">—</span> Black Amber</li>
-              <li><span style="color: var(--gold);">—</span> Tobacco</li>
-              <li><span style="color: var(--gold);">—</span> Oud · Musk</li>
+              <li><span style="color: var(--gold);">Cedarwood</span></li>
+              <li><span style="color: var(--gold);">Black Amber</span></li>
+              <li><span style="color: var(--gold);">Oud · Musk</span></li>
             </ul>
           </article>
         </div>
@@ -250,7 +245,7 @@
             <span class="philosophy__caption">Atelier · Grasse</span>
           </div>
           <div class="philosophy__content">
-            <span class="section-tag" data-reveal="up">The Maison</span>
+            <span class="section-tag" data-reveal="up" style="color: var(--gold);">The Maison</span>
             <blockquote class="philosophy__quote" data-reveal="up" data-reveal-delay="0.05">
               "A fragrance is not made of essences alone — it is made of the <em class="accent">season it remembers.</em> We do not invent perfumes; we merely listen to the year, and give it a voice."
             </blockquote>
@@ -268,7 +263,7 @@
     <!-- ===== CTA ===== -->
     <section class="section section--paper" style="border-top: 1px solid var(--line);">
       <div class="container container--narrow text-center">
-        <span class="section-tag" data-reveal="up" style="justify-content: center;">Visit the Maison</span>
+        <span class="section-tag" data-reveal="up" style="justify-content: center;color: var(--gold);">Visit the QUATRÉA</span>
         <h2 class="h1" style="margin-top: 1rem;" data-reveal="up" data-reveal-delay="0.05">Begin a <em class="accent">correspondence.</em></h2>
         <p class="lead" style="margin-top: 2rem; max-width: 50ch; margin-inline: auto;" data-reveal="up" data-reveal-delay="0.1">Private appointments are available at our atelier in Grasse. For enquiries, samples, or to join the QUATRÉA list, please write to the maison.</p>
         <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
@@ -290,10 +285,10 @@
         <div class="footer__col">
           <h4>Fragrances</h4>
           <ul>
-            <li><a href="spring.html">Fleur de Vie</a></li>
-            <li><a href="summer.html">Soleil d'Or</a></li>
-            <li><a href="autumn.html">Bois Mystique</a></li>
-            <li><a href="winter.html">Nuit Éternelle</a></li>
+            <li><a href="spring.html">Spring</a></li>
+            <li><a href="summer.html">Summer</a></li>
+            <li><a href="autumn.html">Autumn</a></li>
+            <li><a href="winter.html">Winter</a></li>
             <li><a href="collection.html">The Collection</a></li>
           </ul>
         </div>
@@ -309,7 +304,7 @@
         <div class="footer__col">
           <h4>Correspondance</h4>
           <ul>
-            <li><a href="mailto:bonjour@quatrea.com">bonjour@quatrea.com</a></li>
+            <li><a href="mailto:info@quatrea.com">info@quatrea.com</a></li>
             <li><a href="contact.html">Atelier Visits</a></li>
             <li><a href="#">Instagram</a></li>
             <li><a href="#">Pinterest</a></li>
@@ -317,7 +312,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <span>© <span data-year>2024</span> Maison QUATRÉA · All rights reserved</span>
+        <span>© <span data-year>2026</span> QUATRÉA · All rights reserved</span>
         <div class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
       </div>
     </div>

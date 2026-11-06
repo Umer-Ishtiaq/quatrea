@@ -1,10 +1,11 @@
 /* =====================================================================
    QUATRÉA — Luxury Perfume Brand
    style.css — Design system, base, typography, layout & components
+   Developed By: Umer Ishtiaq
    ===================================================================== */
 
 /* -----------------------------------------------------------------
-   1. Design Tokens
+   1. Design Variables
    ----------------------------------------------------------------- */
 :root {
   /* Brand palette — warm editorial */
@@ -44,15 +45,15 @@
   --t-h3: clamp(1.5rem, 1.2rem + 1.4vw, 2.4rem);
   --t-h2: clamp(2.2rem, 1.6rem + 3vw, 4rem);
   --t-h1: clamp(3rem, 2rem + 5vw, 6.5rem);
-  --t-display: clamp(4rem, 2.5rem + 9vw, 12rem);
+  --t-display: clamp(3rem, 2rem + 7vw, 8rem);
 
   /* Spacing */
   --s-xs: 0.5rem;
   --s-sm: 1rem;
   --s-md: 2rem;
   --s-lg: 4rem;
-  --s-xl: 7rem;
-  --s-2xl: 11rem;
+  --s-xl: 5rem;
+  --s-2xl: 6rem;
 
   /* Layout */
   --container: 1440px;
@@ -202,7 +203,7 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: clamp(2rem, 1rem + 5vw, 7rem);
-  align-items: center;
+  align-items: flex-start;
 }
 .asym--rev { grid-template-columns: 1.4fr 1fr; }
 
@@ -241,7 +242,7 @@ h1, h2, h3, h4 {
   font-size: 0.72rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--cream);
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
@@ -288,7 +289,7 @@ h1, h2, h3, h4 {
 
 .btn--light { color: var(--cream); border-color: var(--cream); }
 .btn--light::before { background: var(--cream); }
-.btn--light:hover { color: var(--ink); }
+.btn--light:hover { color: var(--gold); }
 
 .btn--gold { color: var(--gold); border-color: var(--gold); }
 .btn--gold::before { background: var(--gold); }
@@ -307,10 +308,10 @@ h1, h2, h3, h4 {
 
 /* Animated underlined link */
 .link-underline {
-  display: inline-block;
   position: relative;
   font-family: var(--font-sans);
   font-size: 0.78rem;
+  font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ink);
@@ -484,7 +485,7 @@ h1, h2, h3, h4 {
 
 .nav__logo {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 600;
   font-size: 1.55rem;
   letter-spacing: 0.18em;
   text-align: center;
@@ -504,7 +505,7 @@ h1, h2, h3, h4 {
 .nav__link {
   font-family: var(--font-sans);
   font-size: 0.72rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: inherit;
@@ -679,7 +680,7 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 8rem var(--gutter) clamp(2rem, 4vw, 4rem);
+  padding: 6rem var(--gutter) clamp(2rem, 4vw, 4rem);
 }
 .hero__top {
   position: absolute;
@@ -699,11 +700,11 @@ h1, h2, h3, h4 {
 }
 .hero__title {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: var(--t-display);
-  line-height: 0.92;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.4rem;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
   overflow: hidden;
   text-shadow: 0 2px 18px rgba(0,0,0,0.45);
 }
@@ -713,8 +714,8 @@ h1, h2, h3, h4 {
 .hero__sub {
   font-family: var(--font-sans);
   font-weight: 300;
-  font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.1rem);
-  max-width: 38ch;
+  font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.2rem);
+  max-width: 42ch;
   color: rgba(245, 241, 232, 0.92);
   line-height: 1.6;
   text-shadow: 0 1px 8px rgba(0,0,0,0.4);
@@ -724,7 +725,7 @@ h1, h2, h3, h4 {
   justify-content: space-between;
   align-items: flex-end;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .hero__cta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 .hero__scroll-cue {
@@ -771,7 +772,7 @@ h1, h2, h3, h4 {
   border-block: 1px solid var(--line);
   background: var(--ink);
   color: var(--cream);
-  padding-block: 1.3rem;
+  padding-block: 0.7rem;
 }
 .marquee--light { background: var(--cream); color: var(--ink); border-color: var(--line); }
 .marquee__track {
@@ -786,7 +787,7 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 3rem;
   font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 1rem + 1.6vw, 2.4rem);
+  font-size: clamp(1.4rem, 1rem + 1.6vw, 2.2rem);
   font-weight: 300;
   white-space: nowrap;
 }
@@ -834,10 +835,9 @@ h1, h2, h3, h4 {
 .intro__side {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding-top: 0.6rem;
+  gap: 1.2rem;
 }
-.intro__paragraph { color: var(--smoke); font-size: 0.98rem; line-height: 1.8; }
+.intro__paragraph { color: var(--smoke); font-size: 20px; line-height: 1.2; }
 .intro__signature {
   font-family: var(--font-serif);
   font-style: italic;
@@ -929,18 +929,21 @@ h1, h2, h3, h4 {
 }
 .season-panel__index {
   position: absolute;
-  top: 1.2rem; left: 1.2rem;
+  top: 1rem; 
+  left: 1.2rem;
   font-family: var(--font-sans);
-  font-size: 0.68rem;
-  letter-spacing: 0.3em;
+  font-size: 1rem;
   color: var(--cream);
+  background: rgba(22, 19, 16, 0.5);
+  border-radius: 6px;
+  padding: 0 10px;
   z-index: 2;
 }
-.season-panel__content { display: flex; flex-direction: column; gap: 1.2rem; }
+.season-panel__content { display: flex; flex-direction: column; gap: 1.2rem; align-items: center; justify-content: center; }
 .season-panel__season {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
-  letter-spacing: 0.4em;
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--gold-soft);
 }
@@ -955,7 +958,7 @@ h1, h2, h3, h4 {
 .season-panel__name .accent { color: var(--gold); font-style: italic; }
 .season-panel__desc {
   font-family: var(--font-sans);
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(245, 241, 232, 0.72);
   line-height: 1.7;
   max-width: 36ch;
@@ -992,7 +995,7 @@ h1, h2, h3, h4 {
 .bottles__header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: end;
+  align-items: center;
   gap: 2rem;
   margin-bottom: clamp(3rem, 2rem + 3vw, 5rem);
 }
@@ -1004,7 +1007,7 @@ h1, h2, h3, h4 {
   letter-spacing: -0.02em;
 }
 .bottles__title .accent { color: var(--gold); font-style: italic; }
-.bottles__intro { color: var(--smoke); max-width: 44ch; line-height: 1.7; }
+.bottles__intro { color: var(--smoke); max-width: 44ch; line-height: 1.6; font-size: 20px; }
 
 .bottles__grid {
   display: grid;
@@ -1050,7 +1053,8 @@ h1, h2, h3, h4 {
 }
 .bottle__season {
   font-family: var(--font-sans);
-  font-size: 0.68rem;
+  font-size: 0.78rem;
+  font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
   color: var(--taupe);
@@ -1081,11 +1085,13 @@ h1, h2, h3, h4 {
 .bottle__price {
   font-family: var(--font-serif);
   font-size: 1.05rem;
+  font-weight: 600;
   color: var(--ink);
 }
 .bottle__link {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 400;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold);
@@ -1120,18 +1126,19 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  align-items: end;
+  align-items: center;
   margin-bottom: clamp(3rem, 2rem + 3vw, 5rem);
 }
 .notes__title {
   font-family: var(--font-serif);
   font-weight: 300;
+  color: var(--cream);
   font-size: var(--t-h1);
   line-height: 1;
   letter-spacing: -0.02em;
 }
 .notes__title .accent { color: var(--gold); font-style: italic; }
-.notes__intro { color: rgba(245, 241, 232, 0.7); max-width: 44ch; line-height: 1.7; }
+.notes__intro { color: rgba(245, 241, 232, 0.7); max-width: 44ch; line-height: 1.6; font-size: 20px; }
 
 .notes__grid {
   display: grid;
@@ -1168,15 +1175,16 @@ h1, h2, h3, h4 {
 .note-card__title {
   font-family: var(--font-serif);
   font-size: 1.6rem;
+  color: currentColor;
   font-weight: 300;
   margin-bottom: 1rem;
   line-height: 1.15;
 }
-.note-card__desc { color: rgba(245, 241, 232, 0.65); font-size: 0.88rem; line-height: 1.7; }
+.note-card__desc { color: rgba(245, 241, 232, 0.65); font-size: 0.98rem; line-height: 1.7; }
 .note-card__list { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 1rem; }
 .note-card__list li {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   color: rgba(245, 241, 232, 0.7);
   padding-left: 1rem;
   position: relative;
@@ -1231,7 +1239,7 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 .philosophy__quote .accent { color: var(--gold); font-style: italic; }
-.philosophy__text { color: var(--smoke); line-height: 1.8; max-width: 50ch; }
+.philosophy__text { color: var(--smoke); line-height: 1.5; max-width: 50ch; font-size: 20px; }
 .philosophy__author {
   font-family: var(--font-sans);
   font-size: 0.7rem;
@@ -1248,7 +1256,7 @@ h1, h2, h3, h4 {
 .collection__header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: end;
+  align-items: center;
   gap: 2rem;
   margin-bottom: clamp(3rem, 2rem + 3vw, 5rem);
 }
@@ -1260,7 +1268,7 @@ h1, h2, h3, h4 {
   letter-spacing: -0.02em;
 }
 .collection__title .accent { color: var(--gold); font-style: italic; }
-.collection__intro { color: var(--smoke); max-width: 44ch; line-height: 1.7; }
+.collection__intro { color: var(--smoke); max-width: 44ch; line-height: 1.6; font-size: 20px;}
 
 .collection__row {
   display: grid;
@@ -1359,6 +1367,7 @@ h1, h2, h3, h4 {
 .newsletter__title {
   font-family: var(--font-serif);
   font-weight: 300;
+  color: var(--cream);
   font-size: var(--t-h1);
   line-height: 1;
   letter-spacing: -0.02em;
@@ -1366,10 +1375,11 @@ h1, h2, h3, h4 {
 }
 .newsletter__title .accent { color: var(--gold); font-style: italic; }
 .newsletter__desc {
+  font-size: 18px;
   color: rgba(245, 241, 232, 0.72);
   margin-top: 1.5rem;
   max-width: 42ch;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 .newsletter__form {
   display: flex;
@@ -1382,7 +1392,8 @@ h1, h2, h3, h4 {
 .newsletter__field label {
   display: block;
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.88rem;
+  font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold-soft);
@@ -1626,7 +1637,8 @@ h1, h2, h3, h4 {
 }
 .contact-form__field label {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.88rem;
+  font-weight: 400;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--taupe);
